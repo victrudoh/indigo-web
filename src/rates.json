@@ -1,0 +1,58 @@
+[
+  {
+    "class": "R1",
+    "rate": 4.0
+  },
+  {
+    "class": "R2",
+    "rate": 45.05
+  },
+  {
+    "class": "R3",
+    "rate": 61.0
+  },
+  {
+    "class": "R4",
+    "rate": 61.0
+  },
+  {
+    "class": "C1",
+    "rate": 59.76
+  },
+  {
+    "class": "C2",
+    "rate": 62.67
+  },
+  {
+    "class": "C3",
+    "rate": 62.67
+  },
+  {
+    "class": "D1",
+    "rate": 59.76
+  },
+  {
+    "class": "D2",
+    "rate": 58.66
+  },
+  {
+    "class": "D3",
+    "rate": 57.22
+  },
+  {
+    "class": "A1",
+    "rate": 61.77
+  },
+  {
+    "class": "A2",
+    "rate": 61.77
+  },
+  {
+    "class": "A3",
+    "rate": 61.77
+  },
+  {
+    "class": "S1",
+    "rate": 62.1
+  }
+]

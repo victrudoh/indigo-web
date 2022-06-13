@@ -1,0 +1,54 @@
+:root {
+    --themeColor: #152b45;
+    
+    
+    --border-radius: 8px;
+    --border-radius-lg: 20px;
+    
+    --text-white: whitesmoke;
+    
+    --text-black: #1C1C1E;
+
+    --text-yellow: #FCA311;
+
+    --text-muted: #686C75;
+
+    --text-blue: #81afdd;
+
+    --text-gradient: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+
+    --text-purple: rgba(144, 130, 236, 0.65);
+
+    --mobile: 450px;
+    --tablet: 800px;
+    
+
+}
+
+span {
+    font-size: 16px;
+    background: -webkit-linear-gradient(#ae67fa, #F49867);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text-white);
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+  *::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px var(--themeColor);
+      border-radius: 10px;
+  }
