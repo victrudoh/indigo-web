@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
+import { success, error } from "../../../helpers/Alert";
 
 // Styles
 import {
@@ -19,7 +20,6 @@ import leftImage from "../../../assets/images/auth/signin/anthem.jpg";
 
 // components
 import { Spinner } from "../../../components/spinner/Spinner.Styles";
-import Alert from "../../../components/alert/Alert";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -48,28 +48,11 @@ const Signin = () => {
       setLoading(false);
       if (response.status === 200) {
         localStorage.setItem("token", token);
-        swal({
-          title: "Success",
-          text: "Login successful",
-          icon: "success",
-          buttons: false,
-          timer: 3000,
-          closeOnClickOutside: false,
-        });
+        success("Login Successful");
         navigate("/profile");
       }
     } catch (err) {
-      // console.log("err: ", err.response);
-      // if (err.response.status === 401) {
-      swal({
-        title: "Oops!",
-        text: err.response.data.error,
-        icon: "error",
-        buttons: false,
-        timer: 3000,
-        closeOnClickOutside: false,
-        dangerMode: true,
-      });
+      error(err.response.data.error);
       setLoading(false);
       // }
     }

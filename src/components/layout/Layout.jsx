@@ -1,5 +1,7 @@
 // Dependencies
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Components
 import MainRouter from "../Routes";
@@ -14,6 +16,17 @@ const Layout = () => {
     <LayoutStyle>
       {/* <Navbar /> */}
       <Navbar2 />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <MainRouter />
     </LayoutStyle>
   );

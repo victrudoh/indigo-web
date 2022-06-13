@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
+import { success, error } from "../../../helpers/Alert";
 
 // Styles
 import {
@@ -46,21 +47,13 @@ const SignUp = () => {
           headers: { "content-type": "application/json" },
         }
       );
-      console.log("response", response);
       setLoading(false);
       if (response.status === 201) {
+        success("Successful!");
         navigate("/signupgotomail");
       }
     } catch (err) {
-      swal({
-        title: "Oops!",
-        text: err.response.data.error,
-        icon: "error",
-        buttons: false,
-        timer: 3000,
-        closeOnClickOutside: false,
-        dangerMode: true,
-      });
+      error(err.response.data.error);
       setLoading(false);
     }
   };

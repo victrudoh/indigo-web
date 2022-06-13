@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import swal from "sweetalert";
+import { error } from "../../helpers/Alert";
 
 // Styles
 import {
@@ -47,16 +48,6 @@ const Leaderboard = () => {
       setUser(user);
       return user;
     } catch (err) {
-      // swal({
-      //   title: "Oops!",
-      //   text: err.response.data.error,
-      //   icon: "error",
-      //   buttons: false,
-      //   timer: 3000,
-      //   closeOnClickOutside: false,
-      //   dangerMode: true,
-      // });
-      // setLoading(false);
       return err;
     }
   };
@@ -77,15 +68,7 @@ const Leaderboard = () => {
       setFiltered(board);
       setLoading(false);
     } catch (err) {
-      swal({
-        title: "Oops!",
-        text: err.response.data.error,
-        icon: "error",
-        buttons: false,
-        timer: 3000,
-        closeOnClickOutside: false,
-        dangerMode: true,
-      });
+      error(err.response.data.error);
       setLoading(false);
     }
   };
